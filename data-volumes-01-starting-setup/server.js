@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static('public'));
 app.use('/feedback', express.static('feedback'));
+app.use('/temp', express.static('temp'));
 
 app.get('/', (req, res) => {
   const filePath = path.join(__dirname, 'pages', 'feedback.html');
